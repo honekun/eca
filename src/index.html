@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>HTML5 canvas matrix</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>" type="text/css" media="all">
+
+</head>
+<body>
+    <div id="canvas-holder">
+        <canvas id="canvas" ></canvas>
+    </div>
+    <div id="controls">
+        <div>
+            <label for="rule">Regla:</label>
+            <input type="number" id="rule" min="0" max="255" value="30" />
+        </div>
+        <div>
+            <label for="speed">Velocidad:</label>
+            <input type="range" min="1" max="100" value="50" class="slider" id="speed">
+        </div>
+        <div>
+            <label for="size">Tamaño:</label>
+            <input type="range" min="3" max="200" value="100" class="slider" id="size">
+        </div>
+        <div>
+            <label for="random">Random:</label>
+            </br>
+            <label for="random" class="switch">
+                <input id="random" type="checkbox">
+                <span class="switch-slider"></span>
+            </label>
+        </div>
+        <div>
+            <button id="start" class="btn start">Iniciar</button>
+            <button id="stop" class="btn stop">Detener</button>
+            <button id="restart" class="btn restart">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    
+</body>
+</html>
